@@ -1,0 +1,17 @@
+{
+  "name": "Enfermidia - App para Enfermeiros",
+  "short_name": "Enfermidia",
+  "description": "Aplicativo completo para estudantes e profissionais de enfermagem",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/garantia (1).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
