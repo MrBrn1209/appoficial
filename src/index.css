@@ -4,8 +4,14 @@
 
 @layer base {
   html { -webkit-tap-highlight-color: transparent; }
+  /* 🔒 prevenir overflow lateral */
+  html, body { box-sizing: border-box; overflow-x: hidden; }
+  *, *::before, *::after { box-sizing: inherit; min-width: 0; }
+
   body {
-    @apply text-gray-900 antialiased;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 16px;
     background: radial-gradient(120% 120% at 0% 0%, #e9fbf2 0%, #f4fff9 25%, #f8fffb 55%, #ffffff 100%);
@@ -15,23 +21,21 @@
   h3 { @apply text-[17px] font-semibold leading-tight; }
 }
 
-:root{
-  --header-h: 56px;
-  --tabbar-h: 64px;
-}
+:root{ --header-h:56px; --tabbar-h:64px; }
 
 .container-app { @apply mx-auto w-full max-w-[430px] px-4; }
+.safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + var(--tabbar-h) + 16px); }
+
 .rounded-2xl-lg { border-radius: 1.25rem; }
 .shadow-soft { box-shadow: 0 6px 24px rgba(0,0,0,.06); }
 .backdrop-card { background: rgba(255,255,255,.9); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
 .glass-header { background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
-.safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + var(--tabbar-h) + 16px); }
 
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display:none; }
+.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
 
 .btn-primary {
   @apply inline-flex items-center justify-center w-full h-12 rounded-xl font-semibold text-white shadow-soft;
-  background: linear-gradient(180deg, #19c27f 0%, #10b981 100%);
+  background: linear-gradient(180deg,#19c27f 0%,#10b981 100%);
 }
 .btn-primary:active { transform: translateY(1px); }
