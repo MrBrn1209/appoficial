@@ -23,7 +23,7 @@ const TabBar: React.FC<TabBarProps> = ({ items, current, onChange }) => {
                 <button
                   onClick={() => onChange(id)}
                   aria-label={label}
-                  className={["w-full h-full flex flex-col items-center justify-center text-[11px]", current===id ? "text-emerald-600":"text-gray-600"].join(" ")}
+                  className={["w-full h-full flex flex-col items-center justify-center text-[11px]", current===id?"text-emerald-700":"text-gray-600"].join(" ")}
                 >
                   <Icon className="h-[22px] w-[22px]" />
                   <span className="mt-[2px]">{label}</span>

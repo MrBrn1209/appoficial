@@ -71,7 +71,7 @@ export const Calculator: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-full overflow-hidden w-full mx-auto">
+    <div className="w-full max-w-full overflow-hidden max-w-4xl mx-auto">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Calculadora de Medicamentos</h1>
         <p className="text-gray-600">
