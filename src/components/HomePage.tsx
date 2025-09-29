@@ -3,9 +3,7 @@ import React from 'react';
 import { BookOpen, Brain, Calculator, MessageCircle, Award, TrendingUp } from 'lucide-react';
 import { Card, CardBody, CardTitle } from '../ui/Card';
 
-interface HomePageProps {
-  onPageChange: (page: string) => void;
-}
+interface HomePageProps { onPageChange: (page: string) => void; }
 
 export const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
   const features = [
@@ -17,31 +15,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
 
   return (
     <div className="space-y-4">
-      <Card className="backdrop-card border-gray-200">
-        <CardBody className="flex items-center gap-4">
+      <Card className="backdrop-card">
+        <CardBody className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-2xl-lg bg-emerald-500 text-white grid place-items-center">E</div>
           <div className="min-w-0">
-            <div className="text-[22px] font-semibold leading-tight">Bem-vindo ao Enfermidia</div>
+            <h1>Bem-vindo ao Enfermidia</h1>
             <div className="text-sm text-gray-600">Estude com foco e praticidade no seu ritmo.</div>
           </div>
         </CardBody>
       </Card>
 
       <div className="grid grid-cols-2 gap-3">
-        <Card>
-          <CardBody>
-            <CardTitle className="flex items-center gap-2"><Award className="h-5 w-5" /> Progresso</CardTitle>
-            <div className="mt-1 text-2xl font-semibold">—</div>
-            <div className="text-xs text-gray-500">Em breve</div>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody>
-            <CardTitle className="flex items-center gap-2"><TrendingUp className="h-5 w-5" /> Último estudo</CardTitle>
-            <div className="mt-1 text-2xl font-semibold">—</div>
-            <div className="text-xs text-gray-500">Em breve</div>
-          </CardBody>
-        </Card>
+        <Card><CardBody><CardTitle className="flex items-center gap-2"><Award className="h-5 w-5" /> Progresso</CardTitle><div className="mt-1 text-2xl font-semibold">—</div><div className="text-xs text-gray-500">Em breve</div></CardBody></Card>
+        <Card><CardBody><CardTitle className="flex items-center gap-2"><TrendingUp className="h-5 w-5" /> Último estudo</CardTitle><div className="mt-1 text-2xl font-semibold">—</div><div className="text-xs text-gray-500">Em breve</div></CardBody></Card>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -63,17 +49,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
           </Card>
         ))}
       </div>
-
-      <Card>
-        <CardBody>
-          <CardTitle>Dicas rápidas</CardTitle>
-          <ul className="mt-2 space-y-1 text-sm text-gray-700">
-            <li>• Estude os termos diariamente (5–10 min).</li>
-            <li>• Faça 1 simulado por dia para fixação.</li>
-            <li>• Use as calculadoras para treinar raciocínio.</li>
-          </ul>
-        </CardBody>
-      </Card>
     </div>
   );
 };

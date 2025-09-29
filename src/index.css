@@ -7,12 +7,22 @@
   body {
     @apply bg-gray-50 text-gray-900 antialiased;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 16px;
   }
+  h1 { @apply text-2xl font-semibold leading-tight; }
+  h2 { @apply text-xl font-semibold leading-tight; }
+  h3 { @apply text-[17px] font-semibold leading-tight; }
 }
 
-.container-app { @apply mx-auto w-full max-w-screen-sm px-4; }
+:root {
+  --header-h: 56px; /* Apple-ish compact header */
+  --tabbar-h: 64px; /* Stable bottom bar height */
+}
+
+.container-app { @apply mx-auto w-full max-w-[430px] px-4; } /* max width like iPhone 14 Pro */
 .rounded-2xl-lg { border-radius: 1.25rem; }
-.shadow-soft { box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+.shadow-soft { box-shadow: 0 6px 24px rgba(0,0,0,.06); }
 .backdrop-card { background: rgba(255,255,255,.9); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
-.glass-header { background: rgba(255,255,255,.86); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.glass-header { background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
 .pill { @apply rounded-full px-3 py-1 text-xs font-medium; }
+.safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + var(--tabbar-h) + 16px); }
