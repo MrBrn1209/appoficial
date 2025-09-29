@@ -13,10 +13,10 @@ export const Card: React.FC<CardProps> = ({ children, className = "", ...rest })
   );
 };
 
-export const CardBody: React.FC<CardProps> = ({ children, className = "", ...rest }) => {
-  return <div className={"p-4 " + className} {...rest}>{children}</div>;
-};
+export const CardBody: React.FC<CardProps> = ({ children, className = "", ...rest }) => (
+  <div className={"p-4 " + className} {...rest}>{children}</div>
+);
 
-export const CardTitle: React.FC<CardProps> = ({ children, className = "", ...rest }) => {
-  return <h3 className={"text-[17px] font-semibold " + className} {...rest}>{children}</h3>;
-};
+export const CardTitle: React.FC<CardProps> = ({ children, className = "", ...rest }) => (
+  <h3 className={"text-[17px] font-semibold " + className} {...rest}>{children}</h3>
+);

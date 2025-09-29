@@ -39,5 +39,4 @@ const TabBar: React.FC<TabBarProps> = ({ items, current, onChange }) => {
     </nav>
   );
 };
-
 export default TabBar;

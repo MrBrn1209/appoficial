@@ -112,7 +112,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Dosagem
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="overflow-x-auto no-scrollbar -mx-4 px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <h4 className="font-medium text-gray-700">Fórmula Básica</h4>
                     <div>
@@ -210,7 +210,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Diluição
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -268,7 +268,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Velocidade de Infusão
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">

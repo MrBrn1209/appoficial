@@ -20,12 +20,10 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
   ] as const;
 
   return (
-    <div className="min-h-dvh bg-gray-50 text-gray-900">
+    <div className="min-h-dvh">
       <AppHeader title="Enfermidia" subtitle="Estudos • Cálculos • Simulados" />
       <main className="pt-4 safe-bottom">
-        <div className="container-app">
-          {children}
-        </div>
+        <div className="container-app">{children}</div>
       </main>
       <TabBar items={menuItems} current={currentPage} onChange={onPageChange} />
     </div>
