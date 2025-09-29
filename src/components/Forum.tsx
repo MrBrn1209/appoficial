@@ -106,8 +106,8 @@ export const Forum: React.FC = () => {
           </button>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-6">
-          <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
             {selectedPost.title}
           </h1>
           
@@ -139,7 +139,7 @@ export const Forum: React.FC = () => {
         </div>
 
         {/* Reply Form */}
-        <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
+        <div className="bg-white rounded-xl shadow-lg p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             Responder
           </h3>
@@ -170,7 +170,7 @@ export const Forum: React.FC = () => {
     <div className="max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Fórum de Dúvidas</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Fórum de Dúvidas</h1>
           <p className="text-gray-600">
             Tire suas dúvidas e compartilhe conhecimento com outros profissionais
           </p>
@@ -202,8 +202,8 @@ export const Forum: React.FC = () => {
       {showNewPost && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-4 md:p-6">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Nova Pergunta
               </h2>
               
@@ -263,7 +263,7 @@ export const Forum: React.FC = () => {
           <div
             key={post.id}
             onClick={() => setSelectedPost(post)}
-            className="bg-white rounded-xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer"
           >
             <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-emerald-600 transition-colors">
               {post.title}

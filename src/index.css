@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
+}
+
+.container-app { @apply mx-auto w-full max-w-screen-sm px-4; }
+.rounded-2xl-lg { border-radius: 1.25rem; }
+.shadow-soft { box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+.backdrop-card { background: rgba(255,255,255,.9); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+.glass-header { background: rgba(255,255,255,.86); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.pill { @apply rounded-full px-3 py-1 text-xs font-medium; }

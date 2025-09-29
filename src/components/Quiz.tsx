@@ -81,16 +81,16 @@ export const Quiz: React.FC = () => {
     return (
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Simulados</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Simulados</h1>
           <p className="text-gray-600">
             Teste seus conhecimentos com questões de concursos públicos
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg text-center">
+        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
           <div className="mb-6">
             <Brain className="h-16 w-16 text-emerald-500 mx-auto mb-4" />
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               Pronto para o desafio?
             </h2>
             <p className="text-gray-600">
@@ -98,7 +98,7 @@ export const Quiz: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="bg-emerald-50 p-4 rounded-lg">
               <Clock className="h-6 w-6 text-emerald-600 mx-auto mb-2" />
               <p className="font-medium text-emerald-900">20 minutos</p>
@@ -118,7 +118,7 @@ export const Quiz: React.FC = () => {
 
           <button
             onClick={startNewQuiz}
-            className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-4 md:px-8 py-4 rounded-lg font-medium hover:from-emerald-700 hover:to-emerald-600 transition-all"
+            className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white px-8 py-4 rounded-lg font-medium hover:from-emerald-700 hover:to-emerald-600 transition-all"
           >
             Iniciar Simulado
           </button>
@@ -136,7 +136,7 @@ export const Quiz: React.FC = () => {
 
     return (
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg">
+        <div className="bg-white rounded-2xl p-8 shadow-lg">
           <div className="text-center mb-8">
             <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
               percentage >= 70 ? 'bg-green-100' : 'bg-red-100'
@@ -148,7 +148,7 @@ export const Quiz: React.FC = () => {
               )}
             </div>
             
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Simulado Concluído!
             </h2>
             <p className="text-gray-600">
@@ -156,17 +156,17 @@ export const Quiz: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">{score}</p>
+              <p className="text-3xl font-bold text-gray-900">{score}</p>
               <p className="text-gray-600">Acertos</p>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">{currentQuiz.length - score}</p>
+              <p className="text-3xl font-bold text-gray-900">{currentQuiz.length - score}</p>
               <p className="text-gray-600">Erros</p>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-lg">
-              <p className={`text-2xl md:text-3xl font-bold ${percentage >= 70 ? 'text-green-600' : 'text-red-600'}`}>
+              <p className={`text-3xl font-bold ${percentage >= 70 ? 'text-green-600' : 'text-red-600'}`}>
                 {percentage}%
               </p>
               <p className="text-gray-600">Aproveitamento</p>
@@ -238,9 +238,9 @@ export const Quiz: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       {/* Header */}
-      <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg mb-6">
+      <div className="bg-white rounded-xl p-6 shadow-lg mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-gray-900">
             Questão {currentQuestionIndex + 1} de {currentQuiz.length}
           </h1>
           <div className="flex items-center space-x-4">
@@ -260,7 +260,7 @@ export const Quiz: React.FC = () => {
       </div>
 
       {/* Question */}
-      <div className="bg-white rounded-xl p-4 md:p-8 shadow-lg mb-6">
+      <div className="bg-white rounded-xl p-8 shadow-lg mb-6">
         <div className="mb-6">
           <div className="flex items-center mb-4">
             <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">

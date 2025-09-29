@@ -73,7 +73,7 @@ export const Calculator: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Calculadora de Medicamentos</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Calculadora de Medicamentos</h1>
         <p className="text-gray-600">
           Calcule dosagens, diluições e velocidades de infusão com precisão
         </p>
@@ -103,7 +103,7 @@ export const Calculator: React.FC = () => {
           </nav>
         </div>
 
-        <div className="p-4 md:p-6">
+        <div className="p-6">
           {/* Dosage Calculator */}
           {activeTab === 'dosage' && (
             <div className="space-y-6">
@@ -112,7 +112,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Dosagem
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <h4 className="font-medium text-gray-700">Fórmula Básica</h4>
                     <div>
@@ -156,7 +156,7 @@ export const Calculator: React.FC = () => {
                     
                     <div className="bg-emerald-50 p-4 rounded-lg">
                       <p className="text-sm text-emerald-700 mb-2">Volume a administrar:</p>
-                      <p className="text-xl md:text-2xl font-bold text-emerald-900">
+                      <p className="text-2xl font-bold text-emerald-900">
                         {calculateDosage().toFixed(2)} ml
                       </p>
                     </div>
@@ -192,7 +192,7 @@ export const Calculator: React.FC = () => {
                     
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <p className="text-sm text-blue-700 mb-2">Dose total:</p>
-                      <p className="text-xl md:text-2xl font-bold text-blue-900">
+                      <p className="text-2xl font-bold text-blue-900">
                         {calculateDosageByWeight().toFixed(2)} mg
                       </p>
                     </div>
@@ -210,7 +210,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Diluição
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -240,7 +240,7 @@ export const Calculator: React.FC = () => {
                     
                     <div className="bg-purple-50 p-4 rounded-lg">
                       <p className="text-sm text-purple-700 mb-2">Concentração:</p>
-                      <p className="text-xl md:text-2xl font-bold text-purple-900">
+                      <p className="text-2xl font-bold text-purple-900">
                         {calculateDilution().toFixed(2)} mg/ml
                       </p>
                     </div>
@@ -268,7 +268,7 @@ export const Calculator: React.FC = () => {
                   Cálculo de Velocidade de Infusão
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -313,7 +313,7 @@ export const Calculator: React.FC = () => {
                     
                     <div className="bg-orange-50 p-4 rounded-lg">
                       <p className="text-sm text-orange-700 mb-2">Velocidade de infusão:</p>
-                      <p className="text-xl md:text-2xl font-bold text-orange-900">
+                      <p className="text-2xl font-bold text-orange-900">
                         {calculateInfusionRate().toFixed(0)} gotas/min
                       </p>
                     </div>

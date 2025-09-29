@@ -49,12 +49,12 @@ export const Auth: React.FC = () => {
             alt="Enfermidia Logo" 
             className="h-20 w-20 mx-auto mb-4 rounded-2xl shadow-lg"
           />
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Enfermidia</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Enfermidia</h1>
           <p className="text-gray-600 mt-2">Sua plataforma de estudos em enfermagem</p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="flex mb-6">
             <button
               onClick={() => setIsLogin(true)}

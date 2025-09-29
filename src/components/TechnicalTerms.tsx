@@ -20,14 +20,14 @@ export const TechnicalTerms: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Termos Técnicos</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Termos Técnicos</h1>
         <p className="text-gray-600">
           Dicionário completo com termos essenciais da enfermagem
         </p>
       </div>
 
       {/* Search and Filter */}
-      <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg mb-6">
+      <div className="bg-white rounded-xl p-6 shadow-lg mb-6">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -54,7 +54,7 @@ export const TechnicalTerms: React.FC = () => {
       </div>
 
       {/* Terms Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredTerms.map((term) => (
           <div
             key={term.id}
@@ -91,10 +91,10 @@ export const TechnicalTerms: React.FC = () => {
       {selectedTerm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-4 md:p-6">
+            <div className="p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     {selectedTerm.term}
                   </h2>
                   <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm rounded-full">
